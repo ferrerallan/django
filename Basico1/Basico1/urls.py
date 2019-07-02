@@ -16,10 +16,14 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from cadastro.views import home
+from cadastro.views import listagem
+from cadastro.views import nova_transacao
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', home)
+    path('home/', home),
+    path('listagem/', listagem),
+    path('nova/', nova_transacao, name='urlnova'),
 ]
 
 admin.site.site_header = 'DTI Teste'

@@ -8,9 +8,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>seja bem vindo {{now}}</h1>
-    {%for elemento in lista %}
-        <a>{{elemento}}</a>
-    {%endfor%}
+    <form method="POST">
+        {% csrf_token %}
+
+        {{ form.as_p }}
+
+        <button type="submit">Salvar</button>
+    </form>
 </body>
 </html>
